@@ -20,23 +20,29 @@ namespace Sistema_de_compra_a_proveedores
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(txtUser.Text == "proveedor" &&  txtPassword.Text == "123")
+            if (txtUser.Text == "proveedor" && txtPassword.Text == "123")
             {
                 Form formProveedor = new FormProveedor();
                 formProveedor.Show();
+                WindowState = FormWindowState.Minimized;
             }
-            else if(txtUser.Text == "empresa" && txtPassword.Text == "123")
+            else if (txtUser.Text == "empresa" && txtPassword.Text == "123")
             {
                 Form formEmpresa = new FormEmpresa();
                 formEmpresa.Show();
+                WindowState = FormWindowState.Minimized;
             }
             else
             {
                 MessageBox.Show("El usuario o la contraseña son incorrectos.");
             }
-
             txtPassword.Clear();
             txtUser.Clear();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

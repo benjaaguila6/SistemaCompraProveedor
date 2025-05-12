@@ -91,8 +91,17 @@
     <Compile Include="Vistas\FormProveedor.Designer.cs">
       <DependentUpon>FormProveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\PedidosEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\PedidosEmpresa.Designer.cs">
+      <DependentUpon>PedidosEmpresa.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Vistas\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FormEmpresa.resx">
+      <DependentUpon>FormEmpresa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\FormInforme.resx">
       <DependentUpon>FormInforme.cs</DependentUpon>
@@ -114,6 +123,9 @@
     </Compile>
     <EmbeddedResource Include="Vistas\FormProveedor.resx">
       <DependentUpon>FormProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\PedidosEmpresa.resx">
+      <DependentUpon>PedidosEmpresa.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -10,25 +10,24 @@ using System.Windows.Forms;
 
 namespace Sistema_de_compra_a_proveedores.Vistas
 {
-    public partial class FormEmpresa : Form
+    public partial class PedidosEmpresa : Form
     {
-        public FormEmpresa()
+        public PedidosEmpresa()
         {
             InitializeComponent();
         }
 
-
-        private void cerrarSesionToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form logIn = new Form1();
             logIn.Show();
-            this.Close();
+            Close();
         }
 
-        private void misPedidosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form pedidos = new PedidosEmpresa();
-            pedidos.Show();
+            Form inicio = new FormEmpresa();
+            inicio.Show();
             this.Close();
         }
     }
