@@ -49,6 +49,12 @@
     <Compile Include="ABM.cs" />
     <Compile Include="GenerarFactura.cs" />
     <Compile Include="Modelos\Empresa.cs" />
+    <Compile Include="Modelos\FormRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modelos\FormRegister.Designer.cs">
+      <DependentUpon>FormRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modelos\Pedido.cs" />
     <Compile Include="Vistas\Form1.cs">
       <SubType>Form</SubType>
@@ -97,6 +103,9 @@
     <Compile Include="Vistas\PedidosEmpresa.Designer.cs">
       <DependentUpon>PedidosEmpresa.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Modelos\FormRegister.resx">
+      <DependentUpon>FormRegister.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

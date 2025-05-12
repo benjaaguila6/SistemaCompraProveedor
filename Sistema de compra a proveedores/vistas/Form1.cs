@@ -1,4 +1,5 @@
-﻿using Sistema_de_compra_a_proveedores.Vistas;
+﻿using Sistema_de_compra_a_proveedores.Modelos;
+using Sistema_de_compra_a_proveedores.Vistas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,6 +43,13 @@ namespace Sistema_de_compra_a_proveedores
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void lblRegister_Click(object sender, EventArgs e)
+        {
+            Form formRegister = new FormRegister();
+            formRegister.Show();
 
         }
     }
