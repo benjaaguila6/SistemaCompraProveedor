@@ -47,40 +47,78 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ABM.cs" />
-    <Compile Include="modelos\Empresa.cs" />
-    <Compile Include="vistas\Form1.cs">
+    <Compile Include="GenerarFactura.cs" />
+    <Compile Include="Modelos\Empresa.cs" />
+    <Compile Include="Modelos\FormRegister.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\Form1.Designer.cs">
+    <Compile Include="Modelos\FormRegister.Designer.cs">
+      <DependentUpon>FormRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Pedido.cs" />
+    <Compile Include="Vistas\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="vistas\FormInforme.cs">
+    <Compile Include="Vistas\FormEmpresa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\FormInforme.Designer.cs">
+    <Compile Include="Vistas\FormEmpresa.Designer.cs">
+      <DependentUpon>FormEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\FormInforme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FormInforme.Designer.cs">
       <DependentUpon>FormInforme.cs</DependentUpon>
     </Compile>
-    <Compile Include="vistas\FormPedidos.cs">
+    <Compile Include="Vistas\FormPedidos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\FormPedidos.Designer.cs">
+    <Compile Include="Vistas\FormPedidos.Designer.cs">
       <DependentUpon>FormPedidos.cs</DependentUpon>
     </Compile>
-    <Compile Include="vistas\FormProduct.cs">
+    <Compile Include="Vistas\FormProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\FormProduct.Designer.cs">
+    <Compile Include="Vistas\FormProduct.Designer.cs">
       <DependentUpon>FormProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="modelos\Producto.cs" />
+    <Compile Include="Modelos\Producto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="modelos\Proveedor.cs" />
-    <Compile Include="modelos\Usuario.cs" />
-    <EmbeddedResource Include="vistas\Form1.resx">
+    <Compile Include="Modelos\Proveedor.cs" />
+    <Compile Include="Modelos\Usuario.cs" />
+    <Compile Include="Vistas\FormProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FormProveedor.Designer.cs">
+      <DependentUpon>FormProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\PedidosEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\PedidosEmpresa.Designer.cs">
+      <DependentUpon>PedidosEmpresa.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Modelos\FormRegister.resx">
+      <DependentUpon>FormRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\FormProduct.resx">
+    <EmbeddedResource Include="Vistas\FormEmpresa.resx">
+      <DependentUpon>FormEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FormInforme.resx">
+      <DependentUpon>FormInforme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FormPedidos.resx">
+      <DependentUpon>FormPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FormProduct.resx">
       <DependentUpon>FormProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -92,6 +130,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Vistas\FormProveedor.resx">
+      <DependentUpon>FormProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\PedidosEmpresa.resx">
+      <DependentUpon>PedidosEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Sistema_de_compra_a_proveedores.Modelos;
+using Sistema_de_compra_a_proveedores.Vistas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,22 +19,38 @@ namespace Sistema_de_compra_a_proveedores
             InitializeComponent();
         }
 
-        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            Form formProduct = new FormProduct();
-            formProduct.Show();
+            if (txtUser.Text == "proveedor" && txtPassword.Text == "123")
+            {
+                Form formProveedor = new FormProveedor();
+                formProveedor.Show();
+                WindowState = FormWindowState.Minimized;
+            }
+            else if (txtUser.Text == "empresa" && txtPassword.Text == "123")
+            {
+                Form formEmpresa = new FormEmpresa();
+                formEmpresa.Show();
+                WindowState = FormWindowState.Minimized;
+            }
+            else
+            {
+                MessageBox.Show("El usuario o la contraseña son incorrectos.");
+            }
+            txtPassword.Clear();
+            txtUser.Clear();
         }
 
-        private void pedidosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            Form formPedido = new FormPedidos();
-            formPedido.Show();
+
         }
 
-        private void informesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void lblRegister_Click(object sender, EventArgs e)
         {
-            Form formInforme = new FormInforme();
-            formInforme.Show();
+            Form formRegister = new FormRegister();
+            formRegister.Show();
+
         }
     }
 }

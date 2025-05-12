@@ -1,5 +1,4 @@
-﻿using Sistema_de_compra_a_proveedores.Vistas;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,13 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Sistema_de_compra_a_proveedores
+namespace Sistema_de_compra_a_proveedores.Vistas
 {
-    public partial class FormProduct : Form
+    public partial class FormProveedor : Form
     {
-        public FormProduct()
+        public FormProveedor()
         {
             InitializeComponent();
+        }
+
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form formProducto = new FormProduct();
+            formProducto.Show();
+            Close();
         }
 
         private void pedidosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -25,17 +31,10 @@ namespace Sistema_de_compra_a_proveedores
             Close();
         }
 
-        private void infomesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void informesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form formInforme = new FormInforme();
             formInforme.Show();
-            Close();
-        }
-
-        private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form formInicio = new FormProveedor();
-            formInicio.Show();
             Close();
         }
 

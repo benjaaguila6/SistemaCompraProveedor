@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sistema_de_compra_a_proveedores
 {
-    public class Usuario
+    public abstract class Usuario
     {
 		private string _user;
 
