@@ -122,7 +122,7 @@
             // lblRegister
             // 
             this.lblRegister.AutoSize = true;
-            this.lblRegister.Location = new System.Drawing.Point(149, 349);
+            this.lblRegister.Location = new System.Drawing.Point(144, 321);
             this.lblRegister.Name = "lblRegister";
             this.lblRegister.Size = new System.Drawing.Size(49, 13);
             this.lblRegister.TabIndex = 8;

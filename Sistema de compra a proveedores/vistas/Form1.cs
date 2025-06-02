@@ -21,25 +21,43 @@ namespace Sistema_de_compra_a_proveedores
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtUser.Text == "proveedor" && txtPassword.Text == "123")
+            string email = txtUser.Text;
+            string password = txtPassword.Text;
+
+            verificarUsuario(email, password);
+        }
+
+        private void verificarUsuario(string email, string password)
+        {
+            Usuario usuario = Usuario.ListUsuarios.FirstOrDefault(u => u.Email == email);
+            if (usuario != null)
             {
-                Form formProveedor = new FormProveedor();
-                formProveedor.Show();
-                WindowState = FormWindowState.Minimized;
-            }
-            else if (txtUser.Text == "empresa" && txtPassword.Text == "123")
-            {
-                Form formEmpresa = new FormEmpresa();
-                formEmpresa.Show();
-                WindowState = FormWindowState.Minimized;
+                if (usuario.Password == password)
+                {
+                    MessageBox.Show($"Inicio de sesion exitoso. Rol: {usuario.Rol}");
+
+                    if (usuario.Rol == "Proveedorr")
+                    {
+                        FormProveedor form = new FormProveedor();
+                        form.ShowDialog();
+                    }
+                    else if (usuario.Rol == "Empresa")
+                    {
+                        FormEmpresa form = new FormEmpresa();
+                        form.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Contrasena incorrecta");
+                    }
+                }
             }
             else
             {
-                MessageBox.Show("El usuario o la contraseña son incorrectos.");
+                MessageBox.Show("Correo electronico no registrado");
             }
-            txtPassword.Clear();
-            txtUser.Clear();
         }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
