@@ -45,5 +45,10 @@ namespace Sistema_de_compra_a_proveedores
             logIn.Show();
             Close();
         }
+
+        private void FormPedidos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

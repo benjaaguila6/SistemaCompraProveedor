@@ -53,6 +53,7 @@
             this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
             this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.cerrarSesionToolStripMenuItem.Text = "Usuario";
+            this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
             // 
             // cerrarSesionToolStripMenuItem1
             // 

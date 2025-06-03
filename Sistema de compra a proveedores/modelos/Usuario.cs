@@ -8,10 +8,10 @@ namespace Sistema_de_compra_a_proveedores
 {
     public class Usuario
     {
-		public static List<Usuario> ListUsuarios = new List<Usuario>();
+        public static List<Usuario> ListUsuarios = new List<Usuario>();
 
 
-		private string _name;
+        private string _name;
 
 		public string Name
 		{
@@ -53,6 +53,7 @@ namespace Sistema_de_compra_a_proveedores
             Name = n;
 			Email = e;
 			Password = p;
+            
         }
     }
 }

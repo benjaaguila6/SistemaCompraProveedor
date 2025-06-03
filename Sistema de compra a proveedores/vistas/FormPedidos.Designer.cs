@@ -106,6 +106,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormPedidos";
             this.Text = "FormPedidos";
+            this.Load += new System.EventHandler(this.FormPedidos_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

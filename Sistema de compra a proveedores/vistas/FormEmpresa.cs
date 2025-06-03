@@ -31,5 +31,10 @@ namespace Sistema_de_compra_a_proveedores.Vistas
             pedidos.Show();
             this.Close();
         }
+
+        private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

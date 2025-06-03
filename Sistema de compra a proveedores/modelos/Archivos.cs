@@ -15,17 +15,22 @@ namespace Sistema_de_compra_a_proveedores.Modelos
         {
             try
             {
+                Usuario.ListUsuarios.Clear();
+
                 FileStream fs = new FileStream("Usuarios.csv", FileMode.OpenOrCreate, FileAccess.Read);
                 StreamReader sr = new StreamReader(fs);
+
 
                 string linea = "";
                 string[] vLinea = new string[0];
 
                 linea = sr.ReadLine();
+                linea = sr.ReadLine();
 
                 while (linea != null)
                 {
                     vLinea = linea.Split(';');
+                    
 
                     string nombre = vLinea[0];
                     string email = vLinea[1];

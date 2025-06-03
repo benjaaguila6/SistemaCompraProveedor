@@ -21,22 +21,26 @@ namespace Sistema_de_compra_a_proveedores
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Archivos archivos = new Archivos();
+            archivos.cargaUsuarios();
+
             string email = txtUser.Text;
             string password = txtPassword.Text;
 
             verificarUsuario(email, password);
+
         }
 
         private void verificarUsuario(string email, string password)
         {
-            Usuario usuario = Usuario.ListUsuarios.FirstOrDefault(u => u.Email == email);
+            Usuario usuario = Usuario.ListUsuarios.FirstOrDefault(u => u.Email.Trim() == email.Trim());
             if (usuario != null)
             {
                 if (usuario.Password == password)
                 {
                     MessageBox.Show($"Inicio de sesion exitoso. Rol: {usuario.Rol}");
 
-                    if (usuario.Rol == "Proveedorr")
+                    if (usuario.Rol == "Proveedor")
                     {
                         FormProveedor form = new FormProveedor();
                         form.ShowDialog();
@@ -61,7 +65,7 @@ namespace Sistema_de_compra_a_proveedores
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void lblRegister_Click(object sender, EventArgs e)

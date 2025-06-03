@@ -8,7 +8,9 @@ namespace Sistema_de_compra_a_proveedores.Modelos
 {
     public class Pedido : GenerarFactura
     {
-		private int _codPedido;
+        public static List<Pedido> ListPedido = new List<Pedido>();
+
+        private int _codPedido;
 
 		public int CodPedido
 		{
@@ -65,6 +67,14 @@ namespace Sistema_de_compra_a_proveedores.Modelos
 			set { _cantidad = value; }
 		}
 
+        public Pedido(int CodPedido, DateTime FEntrega , DateTime FPedido, bool Estado, bool Pago, int CodProduct, int Cantidad )
+        {
+			_codPedido = CodPedido;
+			_fEntrega = FEntrega;
+			_fPedido = FPedido;
+			_estado = Estado;
+			_pago = Pago;
+        }
         public void generarFactura()
         {
             throw new NotImplementedException();

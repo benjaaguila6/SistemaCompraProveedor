@@ -50,13 +50,8 @@
     <Compile Include="GenerarFactura.cs" />
     <Compile Include="Modelos\Archivos.cs" />
     <Compile Include="Modelos\Empresa.cs" />
-    <Compile Include="Modelos\FormRegister.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Modelos\FormRegister.Designer.cs">
-      <DependentUpon>FormRegister.cs</DependentUpon>
-    </Compile>
     <Compile Include="Modelos\Pedido.cs" />
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Vistas\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,9 +105,15 @@
     <Compile Include="Vistas\PedidosEmpresa.Designer.cs">
       <DependentUpon>PedidosEmpresa.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Modelos\FormRegister.resx">
-      <DependentUpon>FormRegister.cs</DependentUpon>
-    </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\Sistema_de_compra_a_proveedores.Form1.resources" />
+    <EmbeddedResource Include="obj\Debug\Sistema_de_compra_a_proveedores.FormInforme.resources" />
+    <EmbeddedResource Include="obj\Debug\Sistema_de_compra_a_proveedores.FormPedidos.resources" />
+    <EmbeddedResource Include="obj\Debug\Sistema_de_compra_a_proveedores.FormProduct.resources" />
+    <EmbeddedResource Include="obj\Debug\Sistema_de_compra_a_proveedores.Modelos.FormRegister.resources" />
+    <EmbeddedResource Include="obj\Debug\Sistema_de_compra_a_proveedores.Properties.Resources.resources" />
+    <EmbeddedResource Include="obj\Debug\Sistema_de_compra_a_proveedores.Vistas.FormEmpresa.resources" />
+    <EmbeddedResource Include="obj\Debug\Sistema_de_compra_a_proveedores.Vistas.FormProveedor.resources" />
+    <EmbeddedResource Include="obj\Debug\Sistema_de_compra_a_proveedores.Vistas.PedidosEmpresa.resources" />
     <EmbeddedResource Include="Vistas\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +147,17 @@
     <EmbeddedResource Include="Vistas\PedidosEmpresa.resx">
       <DependentUpon>PedidosEmpresa.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="bin\Debug\Sistema de compra a proveedores.exe.config" />
+    <None Include="datos\Empresa.csv" />
+    <None Include="datos\Pedidos.csv" />
+    <None Include="datos\Producto.csv" />
+    <None Include="datos\Proveedores.csv" />
+    <None Include="datos\Usuario.csv" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\Sistema de compra a proveedores.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\Sistema de compra a proveedores.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\Sistema de compra a proveedores.csproj.GenerateResource.cache" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -158,6 +170,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Sistema de compra a proveedores.exe" />
+    <Content Include="bin\Debug\Sistema de compra a proveedores.pdb" />
+    <Content Include="obj\Debug\Sistema de compra a proveedores.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Sistema de compra a proveedores.exe" />
+    <Content Include="obj\Debug\Sistema de compra a proveedores.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

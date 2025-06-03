@@ -200,6 +200,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormRegister";
             this.Text = "FormRegister";
+            this.Load += new System.EventHandler(this.FormRegister_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

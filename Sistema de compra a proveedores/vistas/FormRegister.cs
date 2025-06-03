@@ -27,5 +27,10 @@ namespace Sistema_de_compra_a_proveedores.Modelos
             Usuario.ListUsuarios.Add(user);
             archi.escribirArchivo("Usuarios.csv");
         }
+
+        private void FormRegister_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
