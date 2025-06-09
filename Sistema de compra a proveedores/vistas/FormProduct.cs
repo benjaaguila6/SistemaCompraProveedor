@@ -15,9 +15,19 @@ namespace Sistema_de_compra_a_proveedores
 {
     public partial class FormProduct : Form
     {
+        Archivos archivos = new Archivos();
+        Proveedor proveedor = new Proveedor();
         public FormProduct()
         {
             InitializeComponent();
+            archivos.cargarProductos("Producto.csv");
+            actualizarData();
+        }
+
+        private void actualizarData()
+        {
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = Producto.ListProduct;
         }
 
         private void pedidosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -75,6 +85,39 @@ namespace Sistema_de_compra_a_proveedores
 
             fsP.Close();
             srP.Close();
+        }
+
+        private void btnAgregarP_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt16(txtID.Text);
+            int stock = Convert.ToInt16(txtStock.Text);
+            decimal precio = decimal.Parse(txtPrecio.Text);
+
+            Producto producto = new Producto(id, stock, precio);
+            proveedor.Agregar(producto);
+            
+            archivos.escribirArchivo("Producto.csv");
+            actualizarData();
+        }
+
+        private void btnModP_Click(object sender, EventArgs e)
+        {
+            Producto productoSeleccionado = (Producto)dataGridView1.CurrentRow.DataBoundItem;
+            int id = Convert.ToInt16(txtID.Text);
+            int stock = Convert.ToInt16(txtStock.Text);
+            decimal precio = decimal.Parse(txtPrecio.Text);
+            proveedor.Modificar(productoSeleccionado, id, stock, precio);
+            
+            archivos.escribirArchivo("Producto.csv");
+            actualizarData();
+        }
+
+        private void btnEliminarP_Click(object sender, EventArgs e)
+        {
+            Producto productoSeleccionado = (Producto)dataGridView1.CurrentRow.DataBoundItem;
+
+            proveedor.Eliminar(productoSeleccionado);
+            actualizarData();
         }
     }
 }

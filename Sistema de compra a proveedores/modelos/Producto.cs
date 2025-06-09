@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Sistema_de_compra_a_proveedores
 {
-    public class Producto : ABM
+    public class Producto
     {
         public static List<Producto> ListProduct = new List<Producto>();
 
@@ -41,19 +41,6 @@ namespace Sistema_de_compra_a_proveedores
           _precio =Precio;
           _stock =Stock;
         }
-        public void Agregar()
-        {
-            throw new NotImplementedException();
-        }
 
-        public void Eliminar()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Modificar()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

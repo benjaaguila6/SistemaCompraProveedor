@@ -48,12 +48,12 @@ namespace Sistema_de_compra_a_proveedores
 
 		}
 
-        public Usuario(string n, string e, string p)
+        public Usuario(string n, string e, string p, string r)
         {
             Name = n;
-			Email = e;
-			Password = p;
-            
+            Email = e;
+            Password = p;
+            Rol = r;
         }
     }
 }

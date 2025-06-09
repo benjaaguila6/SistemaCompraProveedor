@@ -41,6 +41,12 @@
             this.btnAgregarP = new System.Windows.Forms.Button();
             this.btnModP = new System.Windows.Forms.Button();
             this.btnEliminarP = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.txtStock = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -123,36 +129,93 @@
             // 
             // btnAgregarP
             // 
-            this.btnAgregarP.Location = new System.Drawing.Point(354, 177);
+            this.btnAgregarP.Location = new System.Drawing.Point(354, 210);
             this.btnAgregarP.Name = "btnAgregarP";
             this.btnAgregarP.Size = new System.Drawing.Size(112, 23);
             this.btnAgregarP.TabIndex = 2;
             this.btnAgregarP.Text = "Agregar";
             this.btnAgregarP.UseVisualStyleBackColor = true;
+            this.btnAgregarP.Click += new System.EventHandler(this.btnAgregarP_Click);
             // 
             // btnModP
             // 
-            this.btnModP.Location = new System.Drawing.Point(354, 206);
+            this.btnModP.Location = new System.Drawing.Point(354, 239);
             this.btnModP.Name = "btnModP";
             this.btnModP.Size = new System.Drawing.Size(112, 23);
             this.btnModP.TabIndex = 3;
             this.btnModP.Text = "Modificar";
             this.btnModP.UseVisualStyleBackColor = true;
+            this.btnModP.Click += new System.EventHandler(this.btnModP_Click);
             // 
             // btnEliminarP
             // 
-            this.btnEliminarP.Location = new System.Drawing.Point(354, 235);
+            this.btnEliminarP.Location = new System.Drawing.Point(354, 268);
             this.btnEliminarP.Name = "btnEliminarP";
             this.btnEliminarP.Size = new System.Drawing.Size(112, 23);
             this.btnEliminarP.TabIndex = 4;
             this.btnEliminarP.Text = "Eliminar";
             this.btnEliminarP.UseVisualStyleBackColor = true;
+            this.btnEliminarP.Click += new System.EventHandler(this.btnEliminarP_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(360, 161);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Precio";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(360, 109);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Stock";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(360, 54);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 13);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Codigo Producto";
+            // 
+            // txtPrecio
+            // 
+            this.txtPrecio.Location = new System.Drawing.Point(362, 177);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(100, 20);
+            this.txtPrecio.TabIndex = 14;
+            // 
+            // txtStock
+            // 
+            this.txtStock.Location = new System.Drawing.Point(362, 125);
+            this.txtStock.Name = "txtStock";
+            this.txtStock.Size = new System.Drawing.Size(100, 20);
+            this.txtStock.TabIndex = 13;
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(362, 72);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(100, 20);
+            this.txtID.TabIndex = 12;
             // 
             // FormProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(474, 450);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtPrecio);
+            this.Controls.Add(this.txtStock);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.btnEliminarP);
             this.Controls.Add(this.btnModP);
             this.Controls.Add(this.btnAgregarP);
@@ -185,5 +248,11 @@
         private System.Windows.Forms.Button btnEliminarP;
         private System.Windows.Forms.ToolStripMenuItem usuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cerrarSesionToolStripMenuItem;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtPrecio;
+        private System.Windows.Forms.TextBox txtStock;
+        private System.Windows.Forms.TextBox txtID;
     }
 }

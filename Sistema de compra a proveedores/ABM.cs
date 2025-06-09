@@ -8,8 +8,8 @@ namespace Sistema_de_compra_a_proveedores
 {
     public interface ABM
     {
-        void Modificar();
-        void Agregar();
-        void Eliminar();
+        void Modificar(Producto p, int cod, int stock, decimal precio);
+        void Agregar(Producto p);
+        void Eliminar(Producto p);
     }
 }

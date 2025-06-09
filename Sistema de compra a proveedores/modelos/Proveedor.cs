@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sistema_de_compra_a_proveedores
 {
-    public class Proveedor : Usuario
+    public class Proveedor : Usuario, ABM
     {
 		private int _codProveedor;
 
@@ -24,5 +24,21 @@ namespace Sistema_de_compra_a_proveedores
 			set { _rubro = value; }
 		}
 
-	}
+        public void Modificar(Producto p, int cod, int stock, decimal precio)
+        {
+            p.CodProducto = cod;
+            p.Stock = stock;
+            p.Precio = precio;
+        }
+
+        public void Agregar(Producto p)
+        {
+            Producto.ListProduct.Add(p);
+        }
+
+        public void Eliminar(Producto p)
+        {
+            Producto.ListProduct.Remove(p);
+        }
+    }
 }
